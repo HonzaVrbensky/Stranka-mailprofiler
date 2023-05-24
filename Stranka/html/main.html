@@ -1,203 +1,302 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Administrace</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  </head>
+<html lang="cs">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administrace</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
 <body style="background-color: rgb(220,220,220);">
-    <nav class="navbar navbar-expand-lg" style="background-color: rgb(180,180,180);">    /<!--bg-body-tertiary-->
-        <div class="container-fluid">
-          <a class="navbar-brand" href="./main.html">Hlavní stránka</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+  <nav class="navbar navbar-expand-lg" style="background-color: rgb(180,180,180); z-index: 1;"> /<!--bg-body-tertiary-->
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="./../imgs/logo-xc.png.png" style="height: 2rem;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./dokumentace.html">Nová Dokumentace</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./release_notes.html">Nové Release Notes</a>
+          </li>
+          <!--
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Link
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Link
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
+          </li>-->
+        </ul>
+        <!--
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+        <a class="btn btn-outline-danger" type="submit" href="./index.html">Odhlásit se</a>
+        <!--</form>
+      -->
+      </div>
+    </div>
+  </nav>
+
+  <a href="./dokumentace.html" type="button" class="btn btn-success mt-1" style="position:absolute; right: 4rem;">+
+    Přidat novou dokumentaci</a>
+
+  <div class="container mt-5 bg-light text-dark">
+    <table class="table">
+      <thead>
+        <div style="display: flex; align-items: center;">
+          <div class="container-fluid mt-1" style="width: 30%; display: flex; position: relative; left: 25rem;">
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-primary" type="submit">Search</button>
+              <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
           </div>
         </div>
-      </nav>
-
-      <a href="./dokumentace.html" type="button" class="btn btn-success mt-1" style="position:absolute; right: 4rem;">+ Přidat novou dokumentaci</a>
-
-      <div class="container mt-5 bg-light text-dark">
-      <table class="table">
-        <thead>
-            <header style="text-align: center; font-weight: bolder;">Dokumentace</header>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Název Dokumentace</th>
-            <th scope="col">Poznámka</th>
-            <th scope="col">Poslední editace</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>13. 6. 2023</td>
-            <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
-            <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>17. 6. 2023</td>
-            <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
-            <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry </td>
-            <td>the Bird</td>
-            <td>21. 6. 2023</td>
-            <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
-            <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
-          </tr>
-        </tbody>
         <tr>
-            <th scope="row">4</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>8. 6. 2023</td>
-            <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
-            <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>23. 6. 2023</td>
-            <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
-            <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
-          </tr>
-          <tr>
-            <th scope="row">6</th>
-            <td>Larry </td>
-            <td>the Bird</td>
-            <td>9. 5. 2023</td>
-            <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
-            <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
-          </tr>
-        </tbody>
-        <tr>
-            <th scope="row">7</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>1. 5. 2023</td>
-            <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
-            <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
-          </tr>
-          <tr>
-            <th scope="row">8</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>29. 4. 2023</td>
-            <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
-            <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
-          </tr>
-          <tr>
-            <th scope="row">9</th>
-            <td>Peter</td>
-            <td>Griffin</td>
-            <td>6. 10. 2022</td>
-            <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
-            <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
-          </tr>
-          <tr>
-            <th scope="row">10</th>
-            <td>Larry </td>
-            <td>the Bird</td>
-            <td>1. 6. 2023</td>
-            <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
-            <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
-          </tr>
-        </tbody>
-        <tr>
-            <th scope="row">11</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>7. 6. 2023</td>
-            <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
-            <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
-          </tr>
-          <tr>
-            <th scope="row">12</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>10. 3. 2023</td>
-            <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
-            <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
-          </tr>
-          <tr>
-            <th scope="row">13</th>
-            <td>Larry </td>
-            <td>the Bird</td>
-            <td>1. 2. 2023</td>
-            <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
-            <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
 
-      <a href="./release_notes.html" type="button" class="btn btn-success mt-1" style="position:absolute; right: 4rem;">+ Přidat nové Release Notes</a>
-      
-      <div class="container mt-5 bg-light text-dark">
-        <table class="table">
-          <thead>
-              <header style="text-align: center; font-weight: bolder;">Release Notes</header>
-            <tr>
+          <!--svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+              <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
+            </svg>-->
+
+          <!--           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+            style="position: relative; top: 3px;">
+            Jazyková verze Dokumentace
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Angličtina</a></li>
+            <li><a class="dropdown-item" href="#">Francouzština</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Němčina</a></li>
+            <li><a class="dropdown-item" href="#">Čeština</a></li>
+            <li><a class="dropdown-item" href="#">Španělština</a></li>
+            <li><a class="dropdown-item" href="#">Italština</a></li>
+          </ul>-->
+
+          <th scope="col">#</th>
+          <th scope="col">Název Dokumentace</th>
+          <th scope="col">Poznámka</th>
+          <th scope="col">
+            <div style="margin-bottom: -1.5rem;">Kategorie</div><a class="nav-link dropdown-toggle" href="#"
+              role="button" data-bs-toggle="dropdown" aria-expanded="false" style="position: relative; top: 3px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel"
+                viewBox="0 0 16 16" style="margin-left: 7rem;">
+                <path
+                  d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z" />
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Most Readed</a></li>
+              <li><a class="dropdown-item" href="#">Further Documentation</a></li>
+              <li><a class="dropdown-item" href="#">Interfaces Data-Exchange and API</a></li>
+            </ul>
+          </th>
+          <th scope="col">Poslední editace</th>
+          <th scope="col" colspan="2">Úpravy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>
+            <!--Tohle je poznámka, jak dlouha muze byt, nez to zacne vadit? zatim porad v pohode. Zalamuje se, coz je super. Tohle asi bude fungovat. Uvidime, treba to takhle bude stacit.-->Otto
+          </td>
+          <td>Most Readed</td>
+          <td>13. 6. 2023</td>
+          <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+          <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>Further Documentation</td>
+          <td>17. 6. 2023</td>
+          <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+          <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry </td>
+          <td>the Bird</td>
+          <td>Interfaces Date-Exchange and API</td>
+          <td>21. 6. 2023</td>
+          <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+          <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
+        </tr>
+      </tbody>
+      <tr>
+        <th scope="row">4</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>Further Documentation</td>
+        <td>8. 6. 2023</td>
+        <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+        <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>Most Readed</td>
+        <td>23. 6. 2023</td>
+        <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+        <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>Larry </td>
+        <td>the Bird</td>
+        <td>Further Documentation</td>
+        <td>9. 5. 2023</td>
+        <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+        <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
+      </tr>
+      </tbody>
+      <tr>
+        <th scope="row">7</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>Most Readed</td>
+        <td>1. 5. 2023</td>
+        <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+        <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>Interfaces Date-Exchange and API</td>
+        <td>29. 4. 2023</td>
+        <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+        <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <td>Peter</td>
+        <td>Griffin</td>
+        <td>Most Readed</td>
+        <td>6. 10. 2022</td>
+        <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+        <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td>Larry </td>
+        <td>the Bird</td>
+        <td>Further Documentation</td>
+        <td>1. 6. 2023</td>
+        <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+        <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
+      </tr>
+      </tbody>
+      <tr>
+        <th scope="row">11</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>Further Documentation</td>
+        <td>7. 6. 2023</td>
+        <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+        <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">12</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>Interfaces Date-Exchange and API</td>
+        <td>10. 3. 2023</td>
+        <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+        <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">13</th>
+        <td>Larry </td>
+        <td>the Bird</td>
+        <td>Most Readed</td>
+        <td>1. 2. 2023</td>
+        <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+        <td><a href="./uprava_existujiciho.html"><img src="./../imgs/pencil.svg"></a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <a href="./release_notes.html" type="button" class="btn btn-success mt-1" style="position:absolute; right: 4rem;">+
+    Přidat nové Release Notes</a>
+
+  <div class="container bg-light text-dark" style="margin-top: 4rem;">
+    <table class="table">
+      <thead>
+        <div style="display: flex; align-items: center;">
+          <div class="container-fluid mt-1" style="width: 30%; display: flex; position: relative; left: 25rem;">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
               <th scope="col">#</th>
-              <th scope="col">Název</th>
+              <th scope="col">Název Release Notes</th>
               <th scope="col">Release Date</th>
               <th scope="col">Další verze</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Release Note 13052023</td>
-              <td>13. 6. 2023</td>
-              <td><a href="#" type="button" class="btn btn-outline-primary">EN</a><a href="#" type="button" class="btn btn-outline-primary">CS</a><a href="#" type="button" class="btn btn-outline-primary">DE</a></td>
-              <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
-              <td><a href="#"><img src="./../imgs/pencil.svg"></a></td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Release Note 17062023</td>
-              <td>17. 6. 2023</td>
-              <td><a href="#" type="button" class="btn btn-outline-primary">EN</a><a href="#" type="button" class="btn btn-outline-primary">CS</a><a href="#" type="button" class="btn btn-outline-primary">DE</a></td>
-              <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
-              <td><a href="#"><img src="./../imgs/pencil.svg"></a></td>
-            </tr>
-        </tbody>
+              <th scope="col" colspan="2"> Úpravy</th>
+              </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Release Note 13052023</td>
+          <td>13. 6. 2023</td>
+          <td><a href="#" type="button" class="btn btn-outline-primary">EN</a><a href="#" type="button"
+              class="btn btn-outline-primary">CS</a><a href="#" type="button" class="btn btn-outline-primary">DE</a>
+          </td>
+          <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+          <td><a href="./uprava_release_notes.html"><img src="./../imgs/pencil.svg"></a></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Release Note 17062023</td>
+          <td>17. 6. 2023</td>
+          <td><a href="#" type="button" class="btn btn-outline-primary">EN</a><a href="#" type="button"
+              class="btn btn-outline-primary">CS</a><a href="#" type="button" class="btn btn-outline-primary">DE</a>
+          </td>
+          <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+          <td><a href="./uprava_release_notes.html"><img src="./../imgs/pencil.svg"></a></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Release Note 01052023</td>
+          <td>1. 5. 2023</td>
+          <td><a href="#" type="button" class="btn btn-outline-primary">EN</a><a href="#" type="button"
+              class="btn btn-outline-primary">CS</a><a href="#" type="button" class="btn btn-outline-primary">DE</a>
+          </td>
+          <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+          <td><a href="./uprava_release_notes.html"><img src="./../imgs/pencil.svg"></a></td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Release Note 03022022</td>
+          <td>3. 2. 2022</td>
+          <td><a href="#" type="button" class="btn btn-outline-primary">EN</a><a href="#" type="button"
+              class="btn btn-outline-primary">CS</a><a href="#" type="button" class="btn btn-outline-primary">DE</a>
+          </td>
+          <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
+          <td><a href="./"><img src="./../imgs/pencil.svg"></a></td>
+        </tr>
+      </tbody>
     </table>
-    </div>
+  </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
 </html>
