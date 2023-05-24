@@ -238,6 +238,7 @@
 
   <div class="container bg-light text-dark" style="margin-top: 4rem;">
     <table class="table">
+      <!--
       <thead>
         <div style="display: flex; align-items: center;">
           <div class="container-fluid mt-1" style="width: 30%; display: flex; position: relative; left: 25rem;">
@@ -250,51 +251,77 @@
               <th scope="col">Další verze</th>
               <th scope="col" colspan="2"> Úpravy</th>
               </tr>
-      </thead>
+      </thead>-->
+
+      <th scope="col">#</th>
+      <th scope="col">Název Release Notes</th>
+      <th scope="col"><div style="margin-bottom: -1.5rem;">Release Date</div><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="position: relative; top: 3px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16" style="margin-left: 7rem;">
+          <path d="M12.438 1.668V7H11.39V2.684h-.051l-1.211.859v-.969l1.262-.906h1.046z"/>
+          <path fill-rule="evenodd" d="M11.36 14.098c-1.137 0-1.708-.657-1.762-1.278h1.004c.058.223.343.45.773.45.824 0 1.164-.829 1.133-1.856h-.059c-.148.39-.57.742-1.261.742-.91 0-1.72-.613-1.72-1.758 0-1.148.848-1.835 1.973-1.835 1.09 0 2.063.636 2.063 2.687 0 1.867-.723 2.848-2.145 2.848zm.062-2.735c.504 0 .933-.336.933-.972 0-.633-.398-1.008-.94-1.008-.52 0-.927.375-.927 1 0 .64.418.98.934.98z"/>
+          <path d="M4.5 2.5a.5.5 0 0 0-1 0v9.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L4.5 12.293V2.5z"/>
+        </svg>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Od Nejstarší</a></li>
+        <li><a class="dropdown-item" href="#">Od Nejnovější</a></li>
+      </li>
+      </ul></th>
+      <th scope="col">
+        <div style="margin-bottom: -1.5rem;">Verze</div><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="position: relative; top: 3px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16" style="margin-left: 7rem;">
+            <path d="M12.438 1.668V7H11.39V2.684h-.051l-1.211.859v-.969l1.262-.906h1.046z"/>
+            <path fill-rule="evenodd" d="M11.36 14.098c-1.137 0-1.708-.657-1.762-1.278h1.004c.058.223.343.45.773.45.824 0 1.164-.829 1.133-1.856h-.059c-.148.39-.57.742-1.261.742-.91 0-1.72-.613-1.72-1.758 0-1.148.848-1.835 1.973-1.835 1.09 0 2.063.636 2.063 2.687 0 1.867-.723 2.848-2.145 2.848zm.062-2.735c.504 0 .933-.336.933-.972 0-.633-.398-1.008-.94-1.008-.52 0-.927.375-.927 1 0 .64.418.98.934.98z"/>
+            <path d="M4.5 2.5a.5.5 0 0 0-1 0v9.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L4.5 12.293V2.5z"/>
+          </svg>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Od Nejstarší verze</a></li>
+          <li><a class="dropdown-item" href="#">Od Nejnovější verze</a></li>
+        </li>
+        </ul>
+      </th>
+      <th scope="col" colspan="2">Úpravy</th>
+    </tr>
+  </thead>
+
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>Release Note 13052023</td>
-          <td>13. 6. 2023</td>
-          <td><a href="#" type="button" class="btn btn-outline-primary">EN</a><a href="#" type="button"
-              class="btn btn-outline-primary">CS</a><a href="#" type="button" class="btn btn-outline-primary">DE</a>
-          </td>
+          <td>RN 17052023</td>
+          <td>17. 6. 2023</td>
+          <td>1.4.1</td>
           <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
           <td><a href="./uprava_release_notes.html"><img src="./../imgs/pencil.svg"></a></td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Release Note 17062023</td>
-          <td>17. 6. 2023</td>
-          <td><a href="#" type="button" class="btn btn-outline-primary">EN</a><a href="#" type="button"
-              class="btn btn-outline-primary">CS</a><a href="#" type="button" class="btn btn-outline-primary">DE</a>
-          </td>
+          <td>RN 13062023</td>
+          <td>13. 6. 2023</td>
+          <td>1.4.0</td>
           <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
           <td><a href="./uprava_release_notes.html"><img src="./../imgs/pencil.svg"></a></td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td>Release Note 01052023</td>
+          <td>RN 01052023</td>
           <td>1. 5. 2023</td>
-          <td><a href="#" type="button" class="btn btn-outline-primary">EN</a><a href="#" type="button"
-              class="btn btn-outline-primary">CS</a><a href="#" type="button" class="btn btn-outline-primary">DE</a>
-          </td>
+          <td>1.3.8</td>
           <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
           <td><a href="./uprava_release_notes.html"><img src="./../imgs/pencil.svg"></a></td>
         </tr>
         <tr>
           <th scope="row">4</th>
-          <td>Release Note 03022022</td>
+          <td>RN 03022022</td>
           <td>3. 2. 2022</td>
-          <td><a href="#" type="button" class="btn btn-outline-primary">EN</a><a href="#" type="button"
-              class="btn btn-outline-primary">CS</a><a href="#" type="button" class="btn btn-outline-primary">DE</a>
-          </td>
+          <td>1.0.2</td>
           <td><a href="#"><img src="./../imgs/trash3.svg"></a></td>
           <td><a href="./"><img src="./../imgs/pencil.svg"></a></td>
         </tr>
       </tbody>
     </table>
   </div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
