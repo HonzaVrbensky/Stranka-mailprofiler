@@ -1,1 +1,12 @@
+.button__main {
+    position: absolute;
+    right: 4em;
+}
 
+@media screen and (min-width: 1800px) {
+.button__main {
+    position: absolute;
+    right: 38rem;
+}
+    
+}
